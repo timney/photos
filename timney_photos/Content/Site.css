@@ -1,4 +1,7 @@
-﻿body {
+﻿html {
+    font-family: 'Arimo', sans-serif !important;
+}
+body {
     padding-bottom: 20px;
 }
 
