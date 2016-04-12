@@ -10,15 +10,13 @@ namespace timney_photos_job
 {
     public class Functions
     {
-        // This function will get triggered/executed when a new message is written 
-        // on an Azure Queue called queue.
         public static void ResizeImageForThumbnail(
             [BlobTrigger("original/{name}")] Stream input,
             string name,
             [Blob("thumbnail/{name}")] CloudBlockBlob output)
         {
             var size = new Size(250, 250);
-            var resizeLayer = new ResizeLayer(size, ResizeMode.Crop, AnchorPosition.Center, true);
+            var resizeLayer = new ResizeLayer(size, ResizeMode.Crop);
 
             using (var stream = output.OpenWrite())
             using (ImageFactory imageFactory = new ImageFactory())
@@ -38,7 +36,7 @@ namespace timney_photos_job
             [Blob("web/{name}")] CloudBlockBlob output)
         {
             var size = new Size(900, 900);
-            var resizeLayer = new ResizeLayer(size, ResizeMode.Max, AnchorPosition.Center, true);
+            var resizeLayer = new ResizeLayer(size, ResizeMode.Max);
 
             using (var stream = output.OpenWrite())
             using (ImageFactory imageFactory = new ImageFactory())
