@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timney_photos", "timney_photos\timney_photos.csproj", "{3F3ABF3C-618D-4863-89E6-A2B9A73CBCFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "timney_photos_job", "timney_photos_job\timney_photos_job.csproj", "{25F8CED1-58A1-416D-B757-4424B3E51D03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3F3ABF3C-618D-4863-89E6-A2B9A73CBCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F3ABF3C-618D-4863-89E6-A2B9A73CBCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F3ABF3C-618D-4863-89E6-A2B9A73CBCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F8CED1-58A1-416D-B757-4424B3E51D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F8CED1-58A1-416D-B757-4424B3E51D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F8CED1-58A1-416D-B757-4424B3E51D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F8CED1-58A1-416D-B757-4424B3E51D03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

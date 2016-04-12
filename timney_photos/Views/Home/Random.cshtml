@@ -16,15 +16,52 @@
 <hr />
 <div class="row">
     <div class="col-md-6">
-        <img data-src="https://placehold.it/555x330" 
-             src="https://dl.dropboxusercontent.com/u/39199978/events_screen.png" style="width: 100%"
-             height="330"
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2018.04.45.jpg" style="width: 100%"
+             class="img-rounded"/>
+    </div>
+    <div class="col-md-6">
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2018.04.51.jpg" style="width: 100%"
+             class="img-rounded"/>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-md-6">
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2020.07.30.jpg" style="width: 100%"
+             class="img-rounded"/>
+    </div>
+    <div class="col-md-6">
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2021.26.12.jpg" style="width: 100%"
+             class="img-rounded"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2020.31.55.jpg" style="width: 100%"
+             class="img-rounded"/>
+    </div>
+    <div class="col-md-6">
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2022.19.45.jpg" style="width: 100%"
+             class="img-rounded"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2022.44.58.jpg" style="width: 100%"
              class="img-rounded" />
     </div>
     <div class="col-md-6">
-        <img data-src="https://placehold.it/555x330"
-             src="https://dl.dropboxusercontent.com/u/39199978/events_screen.png" style="width: 100%"
-             height="330"
+        <img src="https://placehold.it/555x330"
+             data-src="https://dl.dropboxusercontent.com/u/39199978/albums/ufc_london/2016-02-27%2022.48.02.jpg" style="width: 100%"
              class="img-rounded" />
     </div>
 </div>
@@ -39,7 +76,7 @@
             }
 
             var rect = el.getBoundingClientRect();
-            console.log(rect.top, rect.left);
+            //console.log(rect.top, rect.left);
             return (
                 rect.top >= 0 &&
                 rect.left >= 0 &&
@@ -51,10 +88,9 @@
         var $images = $('img');
 
         $(window).on('DOMContentLoaded load resize scroll', function() {
-            console.log('ss');
             $images.each(function(i, el) {
                 if (isElementInViewport(el)) {
-                   // $(el).attr('src', $(el).attr('data-src'));
+                    $(el).attr('src', $(el).attr('data-src'));
                 }
             });
         });
