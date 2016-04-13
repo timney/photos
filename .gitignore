@@ -246,3 +246,4 @@ paket-files/
 
 # TIMNEY
 App.secret.config
+Web.secret.config
