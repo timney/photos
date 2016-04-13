@@ -24,6 +24,7 @@ namespace timney_photos_job
                 var mime = MimeTypeMap.GetMimeType(Path.GetExtension(name));
                 output.Properties.ContentType = mime;
                 imageFactory.Load(input)
+                    .AutoRotate()
                     .Resize(resizeLayer)
                     .Quality(80)
                     .Save(stream);
@@ -44,6 +45,7 @@ namespace timney_photos_job
                 var mime = MimeTypeMap.GetMimeType(Path.GetExtension(name));
                 output.Properties.ContentType = mime;
                 imageFactory.Load(input)
+                    .AutoRotate()
                     .Resize(resizeLayer)
                     .Quality(80)
                     .Save(stream);

@@ -1,7 +1,15 @@
-﻿@model dynamic
+﻿@model List<Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob>
 
 @{
     ViewBag.Title = "title";
 }
 
-<h2>Count: @Model</h2>
+<div style="display: flex; flex-direction: row; flex-wrap: wrap">
+    @foreach (var b in @Model)
+    {
+        <div style="margin: 8px; border: 2px solid white">
+            <img src="@b.Uri"/>
+             <input type="text" value="@b.Uri"/>
+        </div>
+    }
+</div>

@@ -24,11 +24,22 @@ namespace timney_photos.Controllers
                 CloudConfigurationManager.GetSetting("StorageConnectionString"));
 
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer container = blobClient.GetContainerReference("thumbnail");
+            CloudBlobContainer container = blobClient.GetContainerReference("web");
 
-            var count = container.ListBlobs().Count();
+            var thumbnails = container.ListBlobs().Cast<CloudBlockBlob>().ToList();
 
-            return View(count);
+            return View(thumbnails);
         }
+
+        public ActionResult PostAlbum(AlbumViewModel album)
+        {
+            return View();
+        }
+    }
+
+    public class AlbumViewModel
+    {
+        public string AlbumName { get; set; }
+        public string Pictures { get; set; }
     }
 }
