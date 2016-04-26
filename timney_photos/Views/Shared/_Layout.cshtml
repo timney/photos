@@ -7,9 +7,18 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="~/Content/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/Content/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12" style="text-align:center">
+                <img src="~/Content/t_logo.png" width="25" style="margin-top:5px"/>
+            </div>
+
+        </div>
+
         @RenderBody()
         <hr />
         <footer>
