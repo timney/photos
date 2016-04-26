@@ -1,0 +1,25 @@
+﻿@model List<Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob>
+
+@{
+    ViewBag.Title = "Mila's 4th Birthday";
+}
+
+<style>
+    h4 {
+        color: grey;
+    }
+</style>
+
+<div>
+    <h2>Mila's 4th Birthday <small>11th April 2016</small></h2>
+    <h4><span class="glyphicon glyphicon-map-marker"></span> Rhu</h4>
+</div>
+
+<div class="row">
+    @foreach (var b in @Model)
+    {
+        <div style="margin: 8px; border: 2px solid white" class="col-md-12">
+            <img src="@b.Uri" width="100%"/>
+        </div>
+    }
+</div>
