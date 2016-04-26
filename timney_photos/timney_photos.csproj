@@ -270,6 +270,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Random.cshtml" />
     <Content Include="Views\Home\Album.cshtml" />
+    <Content Include="Views\Home\Mila-4th-bday.cshtml" />
     <None Include="Web.secret.config" />
   </ItemGroup>
   <ItemGroup>
