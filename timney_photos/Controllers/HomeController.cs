@@ -45,6 +45,20 @@ namespace timney_photos.Controllers
             return View("Mila-4th-bday", thumbnails);
         }
 
+        [Route("sophia-matilda")]
+        public ActionResult SophiaMatilda()
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
+                CloudConfigurationManager.GetSetting("StorageConnectionString"));
+
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClient.GetContainerReference("web");
+
+            var thumbnails = container.ListBlobs("sophiamatilda", true).Cast<CloudBlockBlob>().ToList();
+
+            return View("Sophia-Matilda", thumbnails);
+        }
+
         public ActionResult PostAlbum(AlbumViewModel album)
         {
             return View();
